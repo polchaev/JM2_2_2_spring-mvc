@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>I18N Spring Boot</title>
+    <style>table th, table td</style>
+</head>
+<body>
+<h1>Cars</h1>
+<table>
+    <tr>
+        <th>YearOld</th>
+        <th>Model</th>
+        <th>Series</th>
+    </tr>
+    <tr th:each="car,state:${car}">
+        <td th:utext="${car.yearOld}">YearOld</td>
+        <td th:utext="${car.model}">Model</td>
+        <td th:utext="${car.series}">Series</td>
+    </tr>
+</table>
+
+</body>
+</html>
